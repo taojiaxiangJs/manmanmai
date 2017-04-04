@@ -1,0 +1,124 @@
+body {
+  background-color: #fff;
+}
+/*ͷ��*/
+.mallnav_header {
+  width: 100%;
+  height: 50px;
+  background-color: #f18e31;
+  position: relative;
+  font-size: 20px;
+  line-height: 50px;
+  color: #ffffff;
+}
+.mallnav_header .header_back {
+  width: 15%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  color: #ffffff;
+}
+.mallnav_header .header_title {
+  width: 70%;
+  text-align: center;
+}
+.mallnav_header .app_download {
+  height: 34px;
+  width: 15%;
+  background: url('../img/hyz/app_download.png') 0 0 no-repeat;
+  -webkit-background-size: 34px 34px;
+  background-size: 34px 34px;
+  margin-top: 8px;
+}
+/*����*/
+.mallnav_content {
+  padding: 20px 50px 0 50px;
+}
+.mallnav_content a {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5px;
+  height: 40px;
+  border: 1px solid #ababab;
+  background-color: #f5f5f5;
+  line-height: 40px;
+  text-align: center;
+}
+.mallnav_content img {
+  margin: auto 0;
+}
+/*�ײ�*/
+.footer_l {
+  margin-top: 20px;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+}
+.footer_t {
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-top: 1px solid #757575;
+  border-bottom: 1px solid #757575;
+  background-color: #f6f6f6;
+}
+.footer_t .login,
+.footer_t .register,
+.footer_t .return_top {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+}
+.footer_t .login {
+  width: 29%;
+}
+.footer_t .register {
+  width: 29%;
+  border-left: 1px solid #757575;
+}
+.footer_t .return_top {
+  width: 40%;
+  border-left: 1px solid #757575;
+}
+.footer_t .return_top img {
+  max-height: 14px;
+}
+.footer_b {
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+  background-color: #f6f6f6;
+}
+.footer_b > p {
+  height: 14px;
+  line-height: 20px;
+}
+.footer_b .app_download {
+  color: #fd0000;
+}
+.footer_b .mmm_mobile {
+  color: #000000;
+}
+.gotop {
+  display: inline-block;
+  position: fixed;
+  display: none;
+  z-index: 999;
+  bottom: 30px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #fff2f2;
+  border-radius: 20px;
+  opacity: 0.5;
+  font-weight: bolder;
+  background-color: #000000;
+}

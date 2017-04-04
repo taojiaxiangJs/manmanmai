@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>优惠券</title>
+    <!--<link rel="stylesheet" href="../css/dccoupon.css"/>-->
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/dccoupon.css"/>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/font.css">
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template.js"></script>
+</head>
+<body>
+<!--<header>
+    <div class="h-left fl"><a href="http://m.manmanbuy.com/"><i class="myIcon">&#xe600;</i></a></div>
+    <h1>优惠券</h1>
+    <a href="" class="fr"><img src="../img/yq/header_app.png" alt=""/></a>
+</header>-->
+
+<!--头部-->
+<div class="buyHeader">
+    <!--向左返回箭头-->
+    <div class="back">
+        <a href="">
+            <i class="iconfont">&#xe697;</i>
+        </a>
+    </div>
+    <!--标题-->
+    <h1>优惠券</h1>
+    <!--右边图标-->
+    <div class="home">
+        <a href="" class="icon-app"><img src="./images/yq/header_app.png" alt=""/></a>
+    </div>
+</div>
+<!--优惠券-->
+<div class="homes">
+
+</div>
+<div class="clearfix"></div>
+<!--返回首页-->
+<div class="nav">
+    <a href="./index.html">首页</a>
+    &nbsp;>&nbsp;
+    <a href="">优惠券</a>
+</div>
+
+<!--底部-->
+<div class="footapp">
+    <div class="fo">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="">返回顶部</a>
+    </div>
+    <div class="app">
+        <p ><a href="" class="app1">手机APP下载</a>
+            <a href="" class="app2">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</div>
+</body>
+<!--优惠券模板-->
+<script type="text/template" id="list_tpl">
+    <ul>
+        {{ each result as value i }}
+        <li class="fl">
+            <a href="{{ value.couponLink +'?couponId='+ value.couponId }}"><img src="{{ value.couponImg }}" alt="{{ value.couponTitle }}"/></a>
+        </li>
+        {{ /each }}
+    </ul>
+
+</script>
+<script>
+        $.get('http://139.199.157.195:9090/api/getcoupon', function (data) {
+            var html = template('list_tpl',data);
+            $('.homes').html(html);
+        });
+</script>
+
+</html>

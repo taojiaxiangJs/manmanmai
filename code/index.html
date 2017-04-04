@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买比价网-手机版</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/font.css">
+</head>
+<body>
+<!--顶部-->
+<header>
+    <div class="fl logo" id="top">
+        <a href="javascript:;">
+            <img src="./images/header_logo.png" alt=""/>
+        </a>
+    </div>
+    <div class="fr appdown">
+        <a href="javascript:;">
+            <img src="./images/header_app.png" alt=""/>
+        </a>
+    </div>
+</header>
+<!--搜索栏-->
+<div id="search" class="clearfix">
+    <div class="searchtxt">
+        <input type="text" placeholder="请输入你想比价的商品"/>
+    </div>
+    <div class="searchbtn">
+        <input type="submit" value="搜索"/>
+    </div>
+</div>
+<!--轮播图-->
+<div class="index_slide">
+    <ul class="clearfix">
+        <li >
+            <img src="./images/hc/slide1.jpg" alt="1">
+        </li>
+        <li>
+            <img src="./images/hc/slide2.jpg" alt="2">
+        </li>
+        <li>
+            <img src="./images/hc/slide3.jpg" alt="3">
+        </li>
+        <li>
+            <img src="./images/hc/slide4.jpg" alt="4">
+        </li>
+    </ul>
+    <ul></ul>
+</div>
+<!--菜单导航栏-->
+<div class="big-classify">
+    <div class="row clearfix">
+        <!--菜单栏的坑-->
+    </div>
+</div>
+<!--超值折扣推荐标题栏-->
+<div class="jxhd clearfix">
+    <span class="fl">超值折扣推荐</span>
+    <img class="fr" src="./images/hc/more.png" alt="更多-省钱控"/>
+</div>
+<!--超值折扣推荐列表块-->
+<div class="jxhdc fl">
+    <div class="cu-list" id="cxdiv">
+        <!--列表模板的空间-->
+    </div>
+    <!--清除浮动-->
+    <div class="clearfix"></div>
+    <!--更多优惠信息-->
+    <div class="more_bar">
+        <a href="javascript:;">更多优惠信息 >></a>
+    </div>
+</div>
+<!--品牌排行-->
+<div class="jxhd">
+    <span class="fl">品牌排行</span>
+    <img class="fr" src="./images/hc/more.png" alt="更多-省钱控"/>
+</div>
+<!--底部-->
+<footer>
+    <div class="footer_top clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%;border: 0;">
+            <img src="./images/hc/top.jpg" alt="返回顶部"/>
+            返回顶部
+        </a>
+    </div>
+    <div class="footer_bottom">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+</body>
+<!--菜单栏模板-->
+<script type="text/template" id="nav_tpl">
+    {{ each result as value i }}
+        <div class="fl area-item">
+            <a href="{{ value.titlehref }}">
+                <div class="pic">
+                    {{ #value.img }}
+                </div>
+                <div class="name">{{ value.name }}</div>
+            </a>
+        </div>
+    {{ /each }}
+</script>
+<!--商品列表模板-->
+<script type="text/template" id="list_tpl">
+    <ul>
+        {{ each result as value i }}
+            <li class="clearfix">
+                <a href="javascript:;">
+                    <div class="pic fl">
+                        {{ #value.productImgSm }}
+                    </div>
+                    <div class="info clearfix">
+                        <div class="title">
+                            {{ value.productName }}
+                            <span>{{ value.productPinkage }}</span>
+                        </div>
+                        <div class="other">
+                            <span class="mall fl">{{ value.productFrom }} | {{ value.productTime }}</span>
+                            <span class="comment fr">
+                                <i class="icon-comment">&#xe69b;</i>
+                                {{ getNum(value.productComCount) }}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {{ /each }}
+    </ul>
+</script>
+<!--引用requirejs-->
+<script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</html>

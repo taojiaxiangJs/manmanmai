@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>比价搜索</title>
+    <link rel="stylesheet" href="./css/cpshopping.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+
+<body>
+    <!--<header id="header" class="clearfix">
+        <div class="logo fl">
+            <a href="#">
+                <img src="images/wsImg/header_logo.png" title="慢慢买-手机版">
+            </a>
+        </div>
+        <div class="appdown fr">
+            <a href="#">
+                <img class="fr" src="images/wsImg/header_app.png" alt="慢慢买下载-按钮">
+            </a>
+        </div>
+    </header>
+    &lt;!&ndash;搜索框部分&ndash;&gt;
+    <div id="search">
+        <input type="search" placeholder="请输入搜索内容">
+        <button class=" btn btn-default fr">搜索</button>
+    </div>-->
+    <!--顶部-->
+    <header>
+        <div class="fl logo" id="top">
+            <a href="javascript:;">
+                <img src="./images/header_logo.png" alt=""/>
+            </a>
+        </div>
+        <div class="fr appdown">
+            <a href="javascript:;">
+                <img src="./images/header_app.png" alt=""/>
+            </a>
+        </div>
+    </header>
+    <!--搜索栏-->
+    <div id="search" class="clearfix">
+        <div class="searchtxt">
+            <input type="text" placeholder="请输入你想比价的商品"/>
+        </div>
+        <div class="searchbtn">
+            <input type="submit" value="搜索"/>
+        </div>
+    </div>
+    <!--请求回来的商品列表-->
+    <div class="category">
+        <ul class="toggle">
+            <li class="taggle_list">
+                <!--商品标题的坑-->
+            </li>
+        </ul>
+    </div>
+    <script id="category_tml" type="text/template">
+        {{each list as val i}}
+        <div class="slide">
+            <a href="#" data-titleid={{val.titleId}} class="show">{{val.title}}<span class="iconfont fr topicon">&#xe6a6;</span></a>
+            <ul class="tab">
+                <!-- 标题子分类的坑 -->
+            </ul>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/template" id="category_product_tml">
+        {{each result}}
+        <li class="col-xs-4 col-sm-4">
+            <a href="productlist.html?categoryId={{$value.categoryId}}&category={{$value.category}}&pageid=1" title="">{{$value.category}} </a>
+        </li>
+        {{/each}}
+    </script>
+    <!--页面登录框-->
+    <!--<footer id="footer">
+        <div class="col-xs-4 col-sm-4">登录</div>
+        <div class="col-xs-4 col-sm-4">注册</div>
+        <div class="col-xs-4 col-sm-4">返回顶部</div>
+        <p><span>手机APP下载&nbsp;慢慢买手机版</span>&#45;&#45;掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </footer>-->
+    <!--底部-->
+    <footer>
+        <div class="footer_top clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#" style="width: 40%;border: 0;">
+                <img src="./images/hc/top.jpg" alt="返回顶部"/>
+                返回顶部
+            </a>
+        </div>
+        <div class="footer_bottom">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a>
+                --掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</body>
+</html>

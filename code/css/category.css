@@ -1,0 +1,230 @@
+#header {
+  width: 100%;
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #cccccc;
+}
+#header .logo {
+  width: 75%;
+  padding: 12px;
+}
+#header .logo img {
+  max-height: 25px;
+}
+#header .appdown {
+  width: 24%;
+  height: 100%;
+  padding: 8px;
+}
+#header .appdown img {
+  max-width: 34px;
+  max-height: 34px;
+}
+/*ËÑË÷¿ò²¿·Ö*/
+#search {
+  padding: 10px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  background-color: #ffffff !important;
+}
+#search input[type="search"] {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #f1f1f1;
+  position: relative;
+}
+#search button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 58px;
+  height: 30px;
+  border-radius: 18px;
+  background-color: #ff841d;
+  color: #ffffff;
+}
+.shop {
+  position: relative;
+}
+.shop .tit {
+  font-size: 16px;
+  text-align: center;
+  line-height: 27px;
+  padding: 0 12px;
+}
+.shop .pic {
+  height: 160px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+.shop .pic img {
+  max-width: 160px;
+  max-height: 160px;
+}
+.tab {
+  margin-top: 5px;
+}
+.tab ul {
+  width: 100%;
+  font-size: 15px;
+  border-top: solid 1px #c14d00;
+  border-bottom: solid 1px #c14d00;
+}
+.tab ul li {
+  float: left;
+  width: 33.33%;
+  height: 34px;
+  text-align: center;
+  background-color: #ffcb3a;
+  border-left: solid 1px #c14d00;
+}
+.tab ul li a {
+  color: #fff;
+  line-height: 34px;
+  width: 100%;
+}
+.tab ul .cur {
+  border: none;
+  background-color: #ff9915;
+}
+.plist a {
+  display: inline;
+}
+.plist a table {
+  padding-top: 12px;
+  border-bottom: 1px solid #bbb;
+}
+.plist .note {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  line-height: 18px;
+  padding: 8px 10px;
+}
+.pj_t {
+  border-top: 4px solid #7a7a7a;
+  margin-top: 5px;
+}
+.pj_t div {
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  overflow: hidden;
+  background: #dbdbdb;
+  border-top: 1px solid #fff;
+}
+#getproductcomkeng {
+  font-size: 12px;
+  color: #666;
+  padding: 10px;
+  padding-bottom: 0;
+  line-height: 18px;
+  margin-top: 3px;
+}
+#getproductcomkeng .pl_pj_list tbody tr:nth-child(1) .name {
+  font-size: 14px;
+  color: #999;
+}
+.pj_C {
+  margin-bottom: 10px;
+}
+.pj_C a {
+  color: #d4d4d4;
+}
+.usermsg {
+  margin-bottom: 10px;
+}
+#getproductkeng img {
+  padding: 10px;
+}
+.more {
+  width: 100%;
+  height: 32px;
+  background-color: #d4d4d4;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  text-align: center;
+  line-height: 32px;
+  border-radius: 5px;
+}
+.more a {
+  color: #000;
+}
+.save {
+  width: 79px;
+  height: 79px;
+  background-image: url('../images/wsImg/sc.jpg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  position: absolute;
+  right: -5px;
+  bottom: 0px;
+}
+/*页面底部登录注册返回顶部样式*/
+#footer {
+  margin-top: 20px;
+}
+#footer footer .product_bottom {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#footer footer .product_bottom li {
+  float: left;
+  width: 33.33%;
+  height: 28px;
+  border: 1px solid #cccccc;
+  line-height: 28px;
+}
+#footer footer .product_bottom li a {
+  display: block;
+  color: #000;
+}
+#footer footer .product_bottom li:nth-of-type(even) {
+  border-right: none;
+  border-left: none;
+}
+#footer footer .product_bottom li:last-of-type {
+  position: relative;
+}
+#footer footer .product_bottom li:last-of-type:before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("../images/wsImg/top.jpg") no-repeat;
+  background-size: 50%;
+  top: 5px;
+  left: 10px;
+}
+#footer footer > p {
+  text-align: center;
+  font-size: 12px;
+}
+#footer footer > p:nth-of-type(1) {
+  padding-top: 35px;
+}
+#footer footer > p:nth-of-type(1) span {
+  color: #f95151;
+}
+/*滚动回顶部*/
+.scrTop {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  background-color: #000;
+  opacity: 0.5;
+  width: 40px;
+  z-index: 9999;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+}

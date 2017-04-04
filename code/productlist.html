@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/productlist.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script src="./lib/common/util.js"></script>
+    <!--商品分类名称模板-->
+    <script id="categoryProduct" type="text/template">
+        {{each result}}
+        <a href="javascript:;">{{$value.category}}</a>
+        {{/each}}
+    </script>
+    <!--对应商品内容的模板-->
+    <script id="product_list_tml" type="text/template">
+        {{each list}}
+        <li class="item">
+            <a href="categorya.html?productid={{$value.productId}}">
+                <div class="productImg fl">
+                    {{#$value.productImg}}
+                </div>
+                <div class="product_description clearfix">
+                    <div class="productName">{{$value.productName}}</div>
+                    <div class="productPrice">
+                        <p class="letter">{{$value.productPrice}}</p>
+                    </div>
+                    <div class="other">
+                        <div class="productQuote fl">{{$value.productQuote}}</div>
+                        <div class="productCom fr">{{$value.productCom}}</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+</head>
+<body>
+<!--<header id="header" class="clearfix">
+    <div class="logo fl">
+        <a href="#">
+            <img src="./images/wsImg/header_logo.png" title="慢慢买-手机版">
+        </a>
+    </div>
+    <div class="appdown fr">
+        <a href="#">
+            <img class="fr" src="./images/wsImg/header_app.png" alt="慢慢买下载-按钮">
+        </a>
+    </div>
+</header>
+&lt;!&ndash;搜索框部分&ndash;&gt;
+<div id="search">
+    <input type="search" placeholder="请输入搜索内容">
+    <button class=" btn btn-default fr">搜索</button>
+</div>-->
+<!--顶部-->
+<!--<header>
+    <div class="fl logo" id="top">
+        <a href="javascript:;">
+            <img src="./images/header_logo.png" alt=""/>
+        </a>
+    </div>
+    <div class="fr appdown">
+        <a href="javascript:;">
+            <img src="./images/header_app.png" alt=""/>
+        </a>
+    </div>
+</header>
+&lt;!&ndash;搜索栏&ndash;&gt;
+<div id="search" class="clearfix">
+    <div class="searchtxt">
+        <input type="text" placeholder="请输入你想比价的商品"/>
+    </div>
+    <div class="searchbtn">
+        <input type="submit" value="搜索"/>
+    </div>
+</div>-->
+<!--顶部-->
+<header>
+    <div class="fl logo" id="top">
+        <a href="javascript:;">
+            <img src="./images/header_logo.png" alt=""/>
+        </a>
+    </div>
+    <div class="fr appdown">
+        <a href="javascript:;">
+            <img src="./images/header_app.png" alt=""/>
+        </a>
+    </div>
+</header>
+<!--搜索栏-->
+<div id="search" class="clearfix">
+    <div class="searchtxt">
+        <input type="text" placeholder="请输入你想比价的商品"/>
+    </div>
+    <div class="searchbtn">
+        <input type="submit" value="搜索"/>
+    </div>
+</div>
+<!--三级菜单栏-->
+<div id="menu">
+    <div class="fl ">
+        <a href="index.html">首页</a>
+        <span>></span>
+        <a href="category.html">全部分类</a>
+        <span>></span>
+        <a id="currentproduct">
+            <!--存放当前分类的坑-->
+        </a>
+        <span>></span>
+    </div>
+    <button class="btn btn-default screening fr">筛选</button>
+</div>
+<!--对应分类的内容列表-->
+<div id="product_list">
+    <ul id="totalItem">
+        <!--商品内容的坑-->
+    </ul>
+</div>
+<!--翻页功能-->
+<div class="single">
+        <button class="btn btn-default fl prevpage">上一页</button>
+    <div class="btn-group dropdown">
+        <button type="button" class="tabbutton btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            第1页
+        </button>
+        <ul class="dropdown-menu selpage">
+            <!--动态生成的li标签翻页-->
+        </ul>
+    </div>
+        <button class="btn btn-default fr nextpage">下一页</button>
+</div>
+<!--页面底部
+<div id="footer">
+    <footer>
+        <ul class="product_bottom">
+            <li><a href="javascript:;" id="login">登录</a></li>
+            <li><a href="javascript:;" id="logout">注册</a></li>
+            <li><a href="#top" id="upTop"><span></span>返回顶部</a></li>
+        </ul>
+        <p class="first"><span><span>手机APP下载</span>&nbsp;慢慢买手机版</span>&#45;&#45;掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </footer>
+</div>-->
+<!--底部-->
+<footer>
+    <div class="footer_top clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%;border: 0;">
+            <img src="./images/hc/top.jpg" alt="返回顶部"/>
+            返回顶部
+        </a>
+    </div>
+    <div class="footer_bottom">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<div class="scrTop"><img src="./images/wsImg/down.png" alt=""></div>
+<script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</body>
+</html>

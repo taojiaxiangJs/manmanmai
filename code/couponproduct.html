@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>肯德基优惠券</title>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/yq_quan.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./js/yq_quan.js"></script>
+    <script src="./lib/template/template.js"></script>
+
+</head>
+<body>
+<!--<header>
+    <div class="h-left fl"><a href="http://m.manmanbuy.com/"><i class="myIcon">&#xe600;</i></a></div>
+    <h1 class="fl">肯德基优惠券</h1>
+    <a href="" class="fr"><img src="../img/yq/header_app.png" alt=""/></a>
+</header>-->
+<!--头部-->
+<div class="buyHeader">
+    <!--向左返回箭头-->
+    <div class="back">
+        <a href="./index.html">
+            <i class="iconfont" style="font-style: normal">&#xe697;</i>
+        </a>
+    </div>
+    <!--标题-->
+    <h1>肯德基优惠券</h1>
+    <!--右边图标-->
+    <div class="home">
+        <a href="" class="icon-app"><img src="./images/yq/header_app.png" alt=""/></a>
+    </div>
+</div>
+
+<!--优惠券-->
+<div class="ad">
+    --点餐前出示手机中的优惠券，即可享受优惠--
+</div>
+<div class="quan-box">
+
+    <ul id='quan'>
+    </ul>
+</div>
+<div class="app">
+    <a href=""><img src="./images/yq/05.png" alt=""/></a>
+</div>
+<div class="big-box">
+    <div class="more">
+        <a href="./index.html">首页</a>
+        &nbsp;>&nbsp;
+        <a href="./coupon.html">优惠券</a>
+        &nbsp;>&nbsp;
+        <a href="#">肯德基优惠券</a>
+    </div>
+    <div class="footapp">
+        <div class="fo">
+            <a href="">登录</a>
+            <a href="">注册</a>
+            <a href="#">返回顶部</a>
+        </div>
+        <div class="app">
+            <p><a href="" class="app1">手机APP下载</a>
+                <a href="" class="app2">慢慢买手机版</a>
+                --掌上比价平台
+            </p>
+
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/template" id="list_tpl">
+
+    {{ each list as value i }}
+    <li class=" clearfix" id="lis">
+        <a href="">
+            <div class="pic fl">
+                {{#value.couponProductImg}}
+            </div>
+            <div class="info">
+                <div class="tit">
+                    <h3>{{ value.couponProductName }}</h3>
+
+                    <h2>
+                        <em>{{ value.couponProductPrice }}</em>
+                    </h2>
+                </div>
+                <div class="time">
+                    {{ value.couponTime }}
+                </div>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+
+</script>
+
+</body>
+</html>

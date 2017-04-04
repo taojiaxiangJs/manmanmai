@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商城导航</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/mallnav.css">
+
+</head>
+<body>
+    <!--头部-->
+    <header class="mallnav_header clearfix" id="header">
+        <a href="./index.html" class="header_back fl">&lt;</a>
+
+        <div class="header_title fl">商城导航</div>
+        <a href="###" class="app_download fr"></a>
+    </header>
+
+    <!--商城列表-->
+    <div class="mallnav_content" id="mallnav_content">
+
+    </div>
+
+    <!-- 底部部分 -->
+    <footer>
+        <div class="footer_l">
+            <a href="../index.html">首页</a>
+            <span>&gt;</span>
+            <span>商城导航</span>
+        </div>
+        <div class="footer_t">
+            <a href="javascript:;" class="login fl">登录</a>
+            <a href="javascript:;" class="register fl">注册</a>
+            <a href="#" class="return_top fr">
+                <img src="./images/hyz/top.png" alt="">
+                返回顶部
+            </a>
+        </div>
+        <div class="footer_b">
+            <p>
+                <a class="app_download" href="javascript:;">手机APP下载</a>
+                <a class="mmm_mobile" href="javascript:;">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+        <div class="gotop">
+            ↑
+        </div>
+    </footer>
+
+    <!--商城导航模板-->
+    <script type="text/template" id="mallnav_link">
+        {{ each result as value }}
+        <a href="{{ value.navHref }}">
+            <img src="{{ value.navImg }}" alt="">
+            <span>{{ value.navTitle }}</span>
+        </a>
+        {{ /each }}
+    </script>
+    <script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</body>
+</html>

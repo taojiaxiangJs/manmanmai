@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>凑单品</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/gtitem.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!--凑单品店铺模板-->
+    <script type="text/template" id="one_head_tml">
+        {{each result}}
+        <li><a href="javascript:;" data-shopid={{$value.shopId}}>{{$value.shopName}}</a></li>
+        {{/each}}
+    </script>
+    <!--凑单品区域模板-->
+    <script type='text/template' id="two_head_tml">
+        {{each result}}
+        <li><a href="javascript:;" data-areaid={{$value.areaId}}>{{getNum($value.areaName)}}</a></li>
+        {{/each}}
+    </script>
+    <!--凑单品商品列表-->
+    <script type="text/template" id="product_tml">
+        {{each result}}
+        <li class='fl single_li' data-shopid={{$value.shopId}}>
+            <a href="javascript:;" id="box">
+                <div class="pic fl">
+                    <img src="./images/wsImg/loading.gif" data-original="{{$value.productImg}}" class="lazy" style='width: 100%;height: 100%'>
+                </div>
+                <div class="title">{{$value.productName}}</div>
+                <div class="outer">
+                    <p class="fl price">{{$value.productPrice}}</p>
+                    <p class='fr'>去凑单</p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</head>
+<body>
+<!--页面头部-->
+<header id="header" >
+    <a href="./index.html" class="icon fl iconfont">&#xe697;</a>
+    <h2 class="Single">凑单品</h2>
+    <div class="download fr"><a href="javascript:;"></a></div>
+</header>
+<!-- nav 导航-->
+<nav id="nav" class="clearfix">
+    <!-- Single button -->
+    <div class="btn-group dropdown fl" id="one">
+        <button type="button" class="btntab btns btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            京东 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="one_head">
+            <!--凑单品店铺模板的坑-->
+        </ul>
+    </div>
+
+    <div class="btn-group dropdown " id="two">
+        <button type="button" class="btntab btns btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            华北 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="two_head">
+            <!--凑单品区域的坑-->
+        </ul>
+    </div>
+    <div class="btn-group dropdown fr" id="three">
+        <button type="button" class="btns btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            全部商品 <span class="caret"></span>
+            <!--最后一个下拉列表默认为空-->
+        </button>
+    </div>
+</nav>
+<!--商品列表-->
+<main id="main">
+    <ul class="product_list">
+        <!--<li class='fl single_li'>-->
+            <!--<a href="javascript:;">-->
+                <!--<div class="pic fl">-->
+                    <!--<img src="../img/wsImg/5461b6e1N70e46439.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="title">Smorss 4.7英寸贴膜神器 适用苹果6/6s/7</div>-->
+                <!--<div class="outer">-->
+                    <!--<p class="fl price">&yen;0.50</p>-->
+                    <!--<p class='fr'>去凑单</p>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--商品列表的坑-->
+    </ul>
+</main>
+<!--滚回顶部-->
+<div class="scrTop"><img src="./images/wsImg/down.png" alt=""></div>
+
+<script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</body>
+</html>

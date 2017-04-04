@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/category.css"/>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <script src="./lib/common/util.js"></script>
+    <title>商品详情功能界面</title>
+    <!--比价购买-->
+    <script type="text/template" id="getproduct">
+        {{each result as value i}}
+        {{ #value.bjShop}}
+        {{/each}}
+    </script>
+    <!--评价模板-->
+    <script type="text/template" id="getproductcom">
+        {{each result as value i}}
+        <div class="pj_list">
+            <ul class="clearfix">
+                <li class="usermsg">
+                    <div class="name">{{value.comName}}</div>
+                    <div class="right fl">{{value.comTime}}</div>
+                </li>
+                <li>
+                    <div class="fr comform">{{ value.comFrom}}</div>
+                </li>
+                <li>
+                    <div class="pj_C clearfix"> {{value.comContent}}</div>
+                </li>
+                <li>
+                    <div class="pj_C">
+                        <a href="#">回复</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        {{/each}}
+    </script>
+</head>
+<body>
+<!--<header id="header" class="clearfix">
+    <div class="logo fl">
+        <a href="#">
+            <img src="./img/wsImg/header_logo.png" title="慢慢买-手机版">
+        </a>
+    </div>
+    <div class="appdown fr">
+        <a href="#">
+            <img class="fr" src="./img/wsImg/header_app.png" alt="慢慢买下载-按钮">
+        </a>
+    </div>
+</header>
+&lt;!&ndash;搜索框部分&ndash;&gt;
+<div id="search">
+    <input type="search" placeholder="请输入搜索内容">
+    <button class=" btn btn-default fr">搜索</button>
+</div>-->
+<!--顶部-->
+<header>
+    <div class="fl logo" id="top">
+        <a href="javascript:;">
+            <img src="./images/header_logo.png" alt=""/>
+        </a>
+    </div>
+    <div class="fr appdown">
+        <a href="javascript:;">
+            <img src="./images/header_app.png" alt=""/>
+        </a>
+    </div>
+</header>
+<!--搜索栏-->
+<div id="search" class="clearfix">
+    <div class="searchtxt">
+        <input type="text" placeholder="请输入你想比价的商品"/>
+    </div>
+    <div class="searchbtn">
+        <input type="submit" value="搜索"/>
+    </div>
+</div>
+    <div class="shop">
+        <!-- s商品坑-->
+    </div>
+        <div class="tab" style="width: 100%;">
+        <ul style="width: 100%;">
+            <li class="cur col-sm-4 col-xs-4">
+                <a href="javascript:;">比价购买</a>
+            </li>
+            <li class="mtab col-sm-4 col-xs-4">
+                <a href="javascript:;">产品参数</a>
+            </li>
+            <li class="col-sm-4 col-xs-4">
+                <a href="javascript:;">优选评价</a>
+            </li>
+        </ul>
+    </div>
+    <div class="plist">
+        <a href="" id="getproductkeng">
+                <!--评价坑-->
+        </a>
+        <div class="note">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+    </div>
+    <div class="pj_t">
+        <div>网友评论</div>
+    </div>
+    <div id="getproductcomkeng">
+        <!-- 评论的坑-->
+
+    </div>
+    <div class="more">
+        <a href="#">查看更多评价...</a>
+    </div>
+<!--页面底部-->
+<!--<div id="footer">
+    <footer>
+        <ul class="product_bottom">
+            <li><a href="javascript:;" id="login">登录</a></li>
+            <li><a href="javascript:;" id="logout">注册</a></li>
+            <li><a href="#top" id="upTop"><span></span>返回顶部</a></li>
+        </ul>
+        <p class="first"><span><span>手机APP下载</span>&nbsp;慢慢买手机版</span>&#45;&#45;掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </footer>
+</div>-->
+<!--底部-->
+<footer>
+    <div class="footer_top clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%;border: 0;">
+            <img src="./images/hc/top.jpg" alt="返回顶部"/>
+            返回顶部
+        </a>
+    </div>
+    <div class="footer_bottom">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<div class="scrTop"><img src="./images/wsImg/down.png" alt=""></div>
+
+    <!-- 商品-->
+    <script type="text/template" id="categoryshop">
+        {{each result as value i}}
+        <div class="tit">
+            {{ #value.productName }}
+        </div>
+        <div class="pic">
+            {{ #value.productImg }}
+        </div>
+        <div class="save"></div>
+        {{/each}}
+</script>
+
+
+
+
+    <script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</body>
+</html>

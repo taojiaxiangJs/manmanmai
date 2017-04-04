@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>品牌大全</title>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/brandTitle.css"/>
+</head>
+<body>
+<!--顶部-->
+<header>
+    <div class="fl logo" id="top">
+        <a href="javascript:;">
+            <img src="./images/header_logo.png" alt=""/>
+        </a>
+    </div>
+    <div class="fr appdown">
+        <a href="javascript:;">
+            <img src="./images/header_app.png" alt=""/>
+        </a>
+    </div>
+</header>
+<!--搜索栏-->
+<div id="search" class="clearfix">
+    <div class="searchtxt">
+        <input type="text" placeholder="请输入你想比价的商品"/>
+    </div>
+    <div class="searchbtn">
+        <input type="submit" value="搜索"/>
+    </div>
+</div>
+<!--nav开始-->
+<nav>
+    <a href="index.html">首页</a>
+    >
+    <a href="brandTitle.html">品牌大全</a>
+</nav>
+<!--brand开始-->
+<div class="brand">
+    <h3>热门品牌排行</h3>
+    <div class="totalBrand">
+        <div class="product">
+            <h3 class="close">电视<span class="icon icon_unfold"></span></h3>
+            <ul class="brand-tv"></ul>
+        </div>
+        <div class="product">
+            <h3 class="close">空调<span class="icon icon_unfold"></span></h3>
+            <ul class="brand-airCondition"></ul>
+        </div>
+        <div class="product">
+            <h3 class="close">影音<span class="icon icon_unfold"></span></h3>
+            <ul class="brand-audio"></ul>
+        </div>
+        <div class="product">
+            <h3 class="close">家电 <span class="icon icon_unfold"></span></h3>
+            <ul class="brand-household"></ul>
+        </div>
+        <div class="product">
+            <h3 class="close">厨卫<span class="icon icon_unfold"></span></h3>
+            <ul class="brand-kitchen"></ul>
+        </div>
+        <div class="product">
+            <h3 class="close">手机<span class="icon icon_unfold"></span></h3>
+            <ul class="brand-mobile"></ul>
+        </div>
+        <div class="product">
+            <h3 class="close">相机<span class="icon icon_unfold"></span></h3>
+            <ul class="brand-camera"></ul>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<footer>
+    <div class="footer_top clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#top" id="topUp" style="width: 40%;border: 0;">
+            <img src="./images/hc/top.jpg" alt="返回顶部"/>
+            返回顶部
+        </a>
+    </div>
+    <div class="footer_bottom">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+</body>
+<script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</html>

@@ -1,0 +1,195 @@
+.body {
+  width: 100%;
+  background-color: #d5d5d5;
+}
+.coprice_header {
+  width: 100%;
+  height: 50px;
+  background-color: #E4393C;
+  position: relative;
+  font-size: 20px;
+  line-height: 50px;
+  color: #ffffff;
+}
+.coprice_header .header_back {
+  width: 15%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  color: #ffffff;
+}
+.coprice_header .header_title {
+  width: 70%;
+  text-align: center;
+}
+.coprice_header .app_download {
+  height: 34px;
+  width: 15%;
+  background: url('../img/hyz/app_download.png') 0 0 no-repeat;
+  -webkit-background-size: 34px 34px;
+  background-size: 34px 34px;
+  margin-top: 8px;
+}
+.coprice_nav {
+  height: 31px;
+  width: 100%;
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.coprice_nav #coprice_nav_ul .active {
+  border-bottom: 2px solid red;
+}
+.coprice_nav #coprice_nav_ul li {
+  margin-left: 10px;
+  float: left;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+.coprice_content {
+  margin-top: 5px;
+  width: 100%;
+}
+.coprice_content .coprice_content_box {
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+}
+.coprice_content .coprice_content_box .coprice_content_img {
+  float: left;
+  margin-right: 5px;
+}
+.coprice_content .coprice_content_box .coprice_content_img img {
+  max-height: 100px;
+  padding-left: 5px;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_title {
+  padding-left: 10px;
+  font-size: 14px;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_price {
+  color: #ff5e5d;
+  font-size: 22px;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_price i {
+  font-size: 14px;
+  font-style: normal;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_price em {
+  font-size: 12px;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_price del {
+  padding-left: 15px;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_youhuiquan a {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px dashed #ff5e5d;
+  color: #ff5e5d;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_link {
+  float: right;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_link a {
+  display: inline-block;
+  font-size: 12px;
+  height: 32px;
+  line-height: 32px;
+  width: 60px;
+  text-align: center;
+  background-color: #ff5e5d;
+  border-radius: 5px;
+  color: #fff;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_yilingjuan .bar {
+  float: left;
+  line-height: 40px;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_yilingjuan .bar span {
+  display: none;
+}
+.coprice_content .coprice_content_box .coprice_content_introduce_yilingjuan .bar b {
+  display: block;
+  font-size: 12px;
+  color: #000;
+  font-weight: 400;
+  bottom: 0;
+}
+.footer_l {
+  margin-top: 20px;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+}
+.footer_t {
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  border-top: 1px solid #757575;
+  border-bottom: 1px solid #757575;
+}
+.footer_t .login,
+.footer_t .register,
+.footer_t .return_top {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+}
+.footer_t .login {
+  width: 29%;
+}
+.footer_t .register {
+  width: 29%;
+  border-left: 1px solid #757575;
+}
+.footer_t .return_top {
+  width: 40%;
+  border-left: 1px solid #757575;
+}
+.footer_t .return_top img {
+  max-height: 14px;
+}
+.footer_b {
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+}
+.footer_b > p {
+  height: 14px;
+  line-height: 20px;
+}
+.footer_b .app_download {
+  color: #fd0000;
+}
+.footer_b .mmm_mobile {
+  color: #000000;
+}
+.gotop {
+  display: inline-block;
+  position: fixed;
+  display: none;
+  z-index: 999;
+  bottom: 30px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #fff2f2;
+  border-radius: 20px;
+  opacity: 0.5;
+  font-weight: bolder;
+  background-color: #000000;
+}

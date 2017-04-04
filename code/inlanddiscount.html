@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/dmdiscount.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <script src='./lib/jquery/jquery.min.js'></script>
+    <script src='./lib/jQuery-plugins/jquery.lazyload.js'></script>
+    <link rel="stylesheet" href="./css/font.css">
+</head>
+<body>
+<!--<header>
+    <div class="h-left fl"><a href="http://m.manmanbuy.com/"><i class="myIcon">&#xe600;</i></a></div>
+    <h1>国内折扣</h1>
+    <a href="" class="fr"><img src="../img/yq/header_app.png" alt=""/></a>
+</header>-->
+
+<!--头部-->
+<div class="buyHeader">
+    <!--向左返回箭头-->
+    <div class="back">
+        <a href="./index.html">
+            <i class="iconfont">&#xe697;</i>
+        </a>
+    </div>
+    <!--标题-->
+    <h1>国内折扣</h1>
+    <!--右边图标-->
+    <div class="home">
+        <a href="" class="icon-app"><img src="./images/yq/header_app.png" alt=""/></a>
+    </div>
+</div>
+
+<div class="main clearfix">
+
+</div>
+
+<div class="footapp">
+    <div class="fo">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href="#">返回顶部</a>
+    </div>
+    <div class="app">
+        <p><a href="" class="app1">手机APP下载</a>
+            <a href="" class="app2">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</div>
+</body>
+<script type="text/template" id="list_tpl">
+    <ul>
+        {{ each result as value i }}
+        <li class="">
+            <a class="description" href="yq_zhekou.html?productid={{value.productId}}">
+                <div class="img">
+                    {{ #value.productImg }}
+                </div>
+                <div class="title">{{value.productName}}</div>
+                <div class="price">{{value.productPrice}}</div>
+                <div class="info">
+                    <div class="mall">{{ value.productFrom }} | {{value.productTime}}</div>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </ul>
+</script>
+<script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</html>

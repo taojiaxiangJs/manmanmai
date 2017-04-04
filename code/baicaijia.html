@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>白菜价</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/coprice.css">
+    <script src="./js/swipe.js"></script>
+
+</head>
+<body>
+<!--头部-->
+<header class="coprice_header clearfix" id="header">
+    <a href="./index.html" class="header_back fl">&lt;</a>
+
+    <div class="header_title fl">白菜价—淘宝内部券</div>
+    <a href="###" class="app_download fr"></a>
+</header>
+
+<!-- 导航区域 -->
+<nav class="coprice_nav">
+    <ul id="coprice_nav_ul" class=" coprice_nav_ul clearfix">
+        <!--高大上的用一波模板引擎-->
+    </ul>
+</nav>
+
+<!-- 内容模块区域 -->
+<div class="coprice_content clearfix" id="coprice_content_wrap">
+
+</div>
+
+<!-- 底部部分 -->
+<footer>
+    <div class="footer_l">
+        <a href="./index.html">首页</a>
+        <span>&gt;</span>
+        <span>白菜价</span>
+    </div>
+    <div class="footer_t">
+        <a href="javascript:;" class="login fl">登录</a>
+        <a href="javascript:;" class="register fl">注册</a>
+        <a href="#" class="return_top fr">
+            <img src="./images/hyz/top.png" alt="">
+            返回顶部
+        </a>
+    </div>
+    <div class="footer_b">
+        <p>
+            <a class="app_download" href="javascript:;">手机APP下载</a>
+            <a class="mmm_mobile" href="javascript:;">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+    <div class="gotop">
+        ↑
+    </div>
+</footer>
+
+    <!--导航的模板-->
+    <script type="text/template" id="coprice_nav">
+        {{ each list   }}
+        <li data-id={{$value.titleId}}>{{ $value.title }}</li>
+        {{ /each }}
+    </script>
+    <!--内容模板-->
+    <script type="text/template" id="coprice_content" class="coprice_content clearfix">
+        {{ each list }}
+        <div class="coprice_content_box clearfix" id="coprice_content_box">
+        <div class="coprice_content_img lazy">{{ #$value.productImg }}</div>
+        <div class="coprice_content_introduce_title">{{#$value.productName }}</div>
+        <div class="coprice_content_introduce_price">{{ #$value.productPrice }}</div>
+        <div class="coprice_content_introduce_youhuiquan">{{ #$value.productCoupon }}</div>
+        <div class="coprice_content_introduce_link">{{ #$value.productHref }}</div>
+        <div class="coprice_content_introduce_yilingjuan">{{ #$value.productCouponRemain }}</div>
+        </div>
+        {{ /each }}
+    </script>
+<script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</body>
+</html>

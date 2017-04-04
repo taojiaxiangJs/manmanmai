@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>省钱控</title>
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="./css/base.css">
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="./css/savemoney.css">
+    <!--&lt;!&ndash;引用jq&ndash;&gt;
+    <script src="./lib/jquery/jquery.min.js"></script>
+    &lt;!&ndash;引用template&ndash;&gt;
+    <script src="./lib/template/template-native.js"></script>
+
+    &lt;!&ndash;引用自己的js&ndash;&gt;
+    <script src="../common/util.js"></script>
+    <script src="../js/savemoney.js"></script>-->
+
+
+</head>
+
+<body>
+<header class="ly_header">
+    <div class="ly_back">
+        <a href="index.html"class="icon icon_back"></a>
+    </div>
+    <h1 id="fanhui">省钱控-最新优惠</h1>
+
+    <div class="ly_home">
+        <a href="javascript:;">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+
+<div>
+    <div class="main">
+        <div class="ly-list">
+            <ul id="slippylist">
+                <!-- 商品坑-->
+            </ul>
+
+        </div>
+        <div class="clearfix page" id="selectPage">
+            <!-- 分页-->
+        </div>
+    </div>
+</div>
+<!--<div class="footer">
+    <footer class="index_footer">
+        <ul class="clearfix">
+            <li><a href="javascript:;" id="login">登录</a></li>
+            <li><a href="javascript:;" id="regist">注册</a></li>
+            <li class="backtop"><a href="#fanhui"><span class="totop"></span>返回顶部</a></li>
+        </ul>
+        <p><a href="" style="color:#e92322"> 手机APP下载 </a>
+            <a href="" style="color:black"> 慢慢买手机版 </a>
+            <span style="color:grey"> &#45;&#45; 掌上比价平台</span>
+        </p>
+        <p><a href="" style="color:grey">m.manmanbuy.com</a></p>
+    </footer>
+</div>-->
+
+<footer>
+    <div class="footer_top clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%;border: 0;">
+            <img src="./images/hc/top.jpg" alt="返回顶部"/>
+            返回顶部
+        </a>
+    </div>
+    <div class="footer_bottom">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+
+
+
+
+
+<!--商品-->
+<script type="text/template" id="product">
+    <% for(var i=0; i< result.length;i++){ %>
+    <li>
+        <a href="particulars.html?productId=<%= result[i].productId %>">
+            <div class="ly_pic"><%=#result[i].productImgSm %></div>
+            <div class=" ly_info">
+                <div class="title"><%= result[i].productName %><span><%= result[i].productPinkage %></span></div>
+                <div class="other"><span class="ly_mall"><%= result[i].productFrom %> | 10-25 14:10</span><span class="ly_comment fr"><i class="icon icon_comment"></i><%= result[i].productComCount %></span></div>
+            </div>
+        </a>
+    </li>
+    <% } %>
+</script>
+
+
+
+<!--分页-->
+<script type="text/template" id="gotoPage">
+    <% if(pageid==1){ %>
+    <span class="w33"><a href="moneyctrl.html?pageid=1">上一页</a></span>
+    <%}else{ %>
+    <span class="w33"><a href="moneyctrl.html?pageid=<%= pageid-1%>">上一页</a></span>
+    <% } %>
+    <span class="w33">
+        <select  name="select" selected="" id="selectBox">
+            <% for(var i=1; i<= pageNumber;i++){ %>
+            <% if(i==pageid){ %>
+            <option value="<%= i %>" selected="selected"><%= i %>/<%= pageNumber %></option>
+            <%}else{ %>
+            <option value="<%= i %>"><%= i %>/<%= pageNumber %></option>
+            <% } %>
+            <% } %>
+        </select>
+    </span>
+    <% if(pageid==pageNumber){ %>
+    <span class="w33"><a href="moneyctrl.html?pageid=<%= pageNumber %>">下一页</a></span>
+    <%}else{ %>
+    <span class="w33"><a href="moneyctrl.html?pageid=<%= pageid+1%>">下一页</a></span>
+    <% } %>
+</script>
+<script src="./lib/requirejs/require.js" data-main="./common/main"></script>
+</body>
+</html>
